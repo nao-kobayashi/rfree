@@ -9,9 +9,10 @@ fn main() {
     let unit_gb = args.iter().any(|s| s.to_lowercase() == "gb");
 
     println!(
-        "OS: {} {}",
+        "OS: {} {}({})",
         os_type().unwrap_or_unknown_message(),
-        os_release().unwrap_or_unknown_message()
+        os_release().unwrap_or_unknown_message(),
+        hostname().unwrap_or_unknown_message(),
     );
 
     println!(
